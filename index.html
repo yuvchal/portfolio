@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - Yuvraj Chahal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0d2e2ec4df.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact </a></li>
+            <i class="fas fa-solid fa-x" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <h1>
+            Hey! I'm Yuvraj <br />
+            <span> (Yuvi) </span> Chahal
+          </h1>
+          <h6>Aspiring Software Engineer</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- about -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/headshot.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me:</h1>
+            <p>
+              I'm Yuvi, a CS student at UIUC 🔶🔷 local to the DC area. From a
+              young age, I have had a passion for coding and problem-solving.
+              Since entering college, my programming knowledge has increased
+              exponentially, and it has been become clear to me that I want to
+              pursue a career in the software feild. Eager to expand my software
+              development skills through hands-on projects and opportunities, I
+              am currently seeking software engineering or machine learning
+              intern roles for Summer 2025. <br /><br />
+              Outside of academics, you can find me watching sports 🏈,
+              traveling ‍✈️ , or listening to music 🎧. I've also recently
+              revived my passion for reading and have been loving
+              <i>The Psychology of Money</i> by Morgan Housel and
+              <i>Good to Great</i> by John Collins.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('education')">
+                Education
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('skills')">Skills</p>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+              <ul>
+                <li>
+                  <span>University of Illinois at Urbana-Champaign (UIUC)</span
+                  ><br />
+                  B.S. in Computer Science and Economics, Expected May 2026
+                </li>
+                <li>
+                  <span>Relevant Coursework: </span><br />Data Structures &
+                  Algorithms, Applied Machine Learning, Algorithms & Models of
+                  Computation, Computer Systems, Database Systems, Discrete
+                  Math, Linear Algebra, Prob & Stats for CS
+                </li>
+                <li>
+                  <span>GPA: 3.8/4.0</span><br />Dean's List Fall 2022 & Spring
+                  2023
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Software Engineering Intern - Zolon Tech</span><br />-
+                  Engineered python <b>AWS Lambda functions</b> using Amazon
+                  Textract for <b>optical character recognition (OCR)</b>,
+                  processing and storing JSON data in <b>Amazon S3</b>,
+                  improving document digitization efficiency by ~30%. <br />
+                  - Developed <b>REST APIs</b> to integrate OCR Lambda functions
+                  with <b>ServiceNow</b>, streamlining document processing
+                  workflows for the Administration for Children and Families.
+                </li>
+                <li>
+                  <span>Computer Science Course Assistant - UIUC</span><br />-
+                  Hosted one-on-one office hours helping students debug/test
+                  their code, as well as explain complex conceptual topics.
+                  <br />
+                  - Assisted 100+ students overcome technical challenges
+                  regarding homework, projects, quizzes, etc.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="skills">
+              <ul>
+                <li>
+                  <span>Programming Languages:</span><br />C++, Python, Java,
+                  JavaScript, HTML/CSS, SQL, C, R
+                </li>
+                <li>
+                  <span>Frameworks & Libraries:</span><br />Node.js, React.js,
+                  Flask, Scikit-learn (sklearn), PyTorch, OpenCV, Pandas, NumPy,
+                  Matplotlib
+                </li>
+                <li>
+                  <span>Tools:</span><br />Git, AWS, Docker, Linux, Android
+                  Studio, Jupyter, Eclipse
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- projects -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">Personal Projects:</h1>
+        <p>
+          hint: if this is your first time visiting, the videos may buffer. try
+          refreshing the page 🙂
+        </p>
+        <div class="work-list">
+          <div class="work">
+            <!-- <img src="images/work-1.png" /> -->
+            <video src="images/work-1.mp4" controls autoplay loop muted>
+              Browser does not support the video tag.
+            </video>
+            <div class="layer">
+              <h3>Neural Network from Scratch to play Pac-Man</h3>
+              <p>
+                - Designed a neural network from scratch using PyTorch to play
+                Pac-Man <br /><br />
+                -Developed a deep convolutional Q-learning agent with multiple
+                convolutional layers, batch normalization, and fully connected
+                layers, leveraging experience replay and target networks for
+                stable and efficient learning. <br /><br />
+                - Fine-tuned hyperparameters such as learning rate, discount
+                factor, and epsilon decay, employing Adam optimizer and mean
+                squared error loss for optimal Q-value estimation.
+              </p>
+              <a
+                href="https://colab.research.google.com/drive/1fc52hgZrJi-0ojdzMXwa1ZDbQK5_65u5?usp=sharing"
+                target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <video src="images/work-2.mov" controls autoplay loop muted>
+              Browser does not support the video tag.
+            </video>
+            <div class="layer">
+              <h3>Line Following and Object Avoiding Robot</h3>
+              <p>
+                - Engineered a robot using Raspberry Pi winning 2nd place at
+                HackIllinois, the largest hackathon in the Midwest <br /><br />
+                - Designed and implemented autonomous navigation logic in
+                Python, incorporating state machine principles for dynamic
+                behavior adjustment in real-world conditions <br /><br />
+                - Utilized OpenCV for real-time image processing, enabling the
+                robot to follow paths and detect/avoid obstacles using color
+                filtering and contour detection techniques.
+              </p>
+              <a
+                href="https://devpost.com/software/line-bot?ref_content=user-portfolio&ref_feature=in_progress"
+                target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" />
+            <div class="layer">
+              <h3>Twitter Sentiment Analysis using NLP</h3>
+              <p>
+                - Developed a Python-based sentiment analysis tool to scrape
+                tweets from certain users, search terms, or hashtags <br />
+                <br />
+                - Utilized the advanced RoBERTa model, an evolution of Google's
+                BERT, for natural language processing, accurately categorizing
+                tweets into positive, neutral, and negative sentiments <br />
+                <br />
+                - Implemented data visualization using Plotly, showcasing
+                sentiment trends over time and enabling detailed analysis
+                through user-interactive features.
+              </p>
+              <a
+                href="https://colab.research.google.com/drive/1kNTWSsMEdZ0n6HOuV9GpgEvFFeC98qeO"
+                target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me!</h1>
+            <p><i class="fa-solid fa-envelope"></i>ychahal2@illinois.edu</p>
+            <p><i class="fa-solid fa-phone"></i>703-955-1098</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/yuvraj-chahal/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://www.github.com/yuvchal" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://instagram.com/yuvchal" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+            <a
+              href="images/Yuvraj_Chahal_Resume.pdf"
+              dowload
+              target="_blank"
+              class="btn btn2"
+              >Download my Resume</a
+            >
+          </div>
+          <div class="contact-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
