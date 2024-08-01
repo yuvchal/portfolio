@@ -144,7 +144,6 @@
         </p>
         <div class="work-list">
           <div class="work">
-            <!-- <img src="images/work-1.png" /> -->
             <video src="images/work-1.mp4" autoplay loop muted playsinline>
               Browser does not support the video tag.
             </video>
@@ -284,6 +283,33 @@
       function closemenu() {
         sidemenu.style.right = "-200px";
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var works = document.querySelectorAll(".work");
+
+        works.forEach(function (work) {
+          if ("ontouchstart" in window) {
+            work.addEventListener("touchstart", function () {
+              var layer = work.querySelector(".layer");
+              if (layer.style.height === "100%") {
+                layer.style.height = "0%";
+              } else {
+                layer.style.height = "100%";
+              }
+            });
+          } else {
+            work.addEventListener("mouseover", function () {
+              var layer = work.querySelector(".layer");
+              layer.style.height = "100%";
+            });
+
+            work.addEventListener("mouseout", function () {
+              var layer = work.querySelector(".layer");
+              layer.style.height = "0%";
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
